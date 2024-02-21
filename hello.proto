@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package rpc_demo;
+
+message HelloRequest {
+  bytes name = 1;
+}
+
+message HelloReply {
+  bytes message = 1;
+}
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
